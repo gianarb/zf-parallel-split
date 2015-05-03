@@ -21,6 +21,9 @@ foreach($config['components'] as $component) {
                 file_get_contents(__DIR__."/script.sh")
             )
         ),
+        'IamInstanceProfile' => array(
+            'Name' => $config['iam']['name'],
+        ),
         "SubnetId" => "subnet-5eeb6f75",
     ));
 

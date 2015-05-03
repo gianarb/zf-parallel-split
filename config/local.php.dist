@@ -5,6 +5,9 @@ return [
         'secret' => '',
         'region' => "us-east-1",
     ],
+    "iam" => [
+        "name" =>,
+    ]
     "components" => [
         "Authentication",
         "Barcode",
