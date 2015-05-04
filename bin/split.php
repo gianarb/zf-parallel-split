@@ -13,6 +13,7 @@ foreach($config['components'] as $component) {
         "MinCount" => 1,
         "MaxCount" => 1,
         "InstanceType" => "t2.micro",
+        "InstanceInitiatedShutdownBehavior" => "terminate",
         "KeyName" => "gianarb-def",
         "UserData" => base64_encode(
             str_replace(

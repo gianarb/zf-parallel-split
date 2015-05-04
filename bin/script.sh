@@ -12,3 +12,4 @@ git remote add origin git@github.com:gianarb/zend-%componentName%
 git push origin master
 git push --tags origin
 aws s3 cp /var/log/split.log  s3://zend-split/zend-%componentName%.log
+sudo shutdown now
