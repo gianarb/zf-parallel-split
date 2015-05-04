@@ -7,7 +7,10 @@ return [
     ],
     "iam" => [
         "name" =>,
-    ]
+    ],
+    "keyName" => "gianarb-def",
+    "bucketBackup" => "zend-split",
+    "sshPath" => "ssh/",
     "components" => [
         "Authentication",
         "Barcode",
