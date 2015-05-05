@@ -8,7 +8,6 @@ $config = require __DIR__."/../config/local.php";
 $client = Ec2Client::factory($config['aws']);
 
 foreach($config['components'] as $component) {
-print_r(render($config, $component));die;
     $result = $client->runInstances(array(
         "ImageId" => "ami-d05e75b8",
         "MinCount" => 1,
@@ -20,7 +19,6 @@ print_r(render($config, $component));die;
         'IamInstanceProfile' => array(
             'Name' => $config['iam']['name'],
         ),
-        "SubnetId" => "subnet-5eeb6f75",
     ));
 
 }
