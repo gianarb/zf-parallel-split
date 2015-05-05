@@ -1,5 +1,6 @@
 {
     "require": {
-        "aws/aws-sdk-php": "~2.8.0"
+        "aws/aws-sdk-php": "~2.8.0",
+        "knplabs/github-api": "~1.2"
     }
 }
