@@ -15,7 +15,7 @@ git clone https://github.com/zendframework/component-split.git /root/component-s
 cd /root/component-split
 ./bin/split-component.sh -c %componentName% -u assets/root-files/phpunit.xml.dist -t assets/root-files/travis.yml
 cd zf2-migrate
-git remote add origin git@github.com:gianarb/zend-%componentName%
+git remote add origin git@github.com:zendframework/zend-%componentName%
 git push origin master
 git push --tags origin
 aws s3 cp /var/log/cloud-init-output.log  s3://%bucketBackup%/zend-%componentName%.log
