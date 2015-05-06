@@ -9,7 +9,14 @@ foreach($config['components'] as $component) {
     try {
     $repo = $client
         ->api('repo')
-        ->create("zend-{$name}", "{$component} component from Zend Framework", 'https://github.com/zendframework/zf2', true);
+        ->create(
+            "zend-{$name}",
+            "{$component} component from Zend Framework",
+            'https://github.com/zendframework/zf2',
+            true,
+            "zendframework",
+            true
+            );
     } catch (\Github\Exception\ValidationFailedException $e) {
         echo "[{$e->getCode()}] {$e->getMessage()} \n\r";
         continue;
