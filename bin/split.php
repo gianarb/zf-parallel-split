@@ -20,6 +20,16 @@ foreach($config['components'] as $component) {
             'Name' => $config['iam']['name'],
         ),
     ));
+    $instanceID = $result['Instances'][0]['InstanceId'];
+    $client->createTags(array(
+        'Resources' => array($instanceID),
+        'Tags' => array(
+            'Tag' => array(
+               'Key' => 'Name',
+               'Value' => "zend-{$component}"
+           )
+        )
+    ));
 
 }
 
