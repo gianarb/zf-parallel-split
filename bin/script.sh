@@ -13,7 +13,7 @@ echo "Host *
      StrictHostKeyChecking no" > ~/.ssh/config
 git clone https://github.com/zendframework/component-split.git /root/component-split
 cd /root/component-split
-./bin/split-component.sh -c %componentName% -u assets/root-files/phpunit.xml.dist -t assets/root-files/travis.yml
+./bin/split.sh -c %componentName%
 cd zf2-migrate
 git remote add origin git@github.com:zendframework/zend-%componentName%
 git push origin master
