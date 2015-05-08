@@ -31,6 +31,8 @@ foreach($config['components'] as $component) {
         )
     ));
 
+    echo "[{$component}] Start \n";
+
 }
 
 function render($config, $component) {
