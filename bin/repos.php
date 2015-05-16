@@ -18,7 +18,7 @@ foreach($config['components'] as $component) {
             true
             );
     } catch (\Github\Exception\ValidationFailedException $e) {
-        echo "[{$e->getCode()}] {$e->getMessage()} \n\r";
+        echo "[{$e->getCode()}] {$component} {$e->getMessage()} \n\r";
         continue;
     }
     echo "[200] Created zend-{$name} \n\r";

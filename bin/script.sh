@@ -1,8 +1,11 @@
 #!/bin/bash
 RAM_DISK=3000m
 mount -t tmpfs -o size=$RAM_DISK tmpfs /root
+add-apt-repository -y ppa:git-core/ppa
 apt-get update
 apt-get install -y python2.7 curl git php5 php5-curl php5-cli
+git config --global user.name "Gianluca Arbezzano"
+git config --global user.email gianarb92@gmail.com
 curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
 python get-pip.py
 pip install awscli
@@ -13,7 +16,7 @@ echo "Host *
      StrictHostKeyChecking no" > ~/.ssh/config
 git clone https://github.com/zendframework/component-split.git /root/component-split
 cd /root/component-split
-./bin/split.sh -c %componentName%
+./bin/split.sh -c %componentName% -r ./zf2-migrate
 cd zf2-migrate
 git remote add origin git@github.com:zendframework/zend-%componentName%
 git push origin master
